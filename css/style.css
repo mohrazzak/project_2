@@ -1,0 +1,225 @@
+:root {
+  --dark: #19283f;
+  --green: rgb(51, 209, 204);
+  --red: rgb(220, 53, 69);
+  --yellow: rgb(255, 196, 0);
+  --section-color: #eff7fa;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.main-title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: var(--green);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+/* Start NavBar */
+.navbar {
+  background-color: var(--dark);
+  color: white;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  color: white;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+  color: var(--green);
+}
+.navbar .search {
+  border-left: 1px solid var(--green);
+  cursor: pointer;
+}
+.navbar .search:hover {
+  color: var(--green);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.navbar-toggler {
+  color: white;
+  font-size: 25px;
+  border-color: white;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green);
+}
+/* End Navbar */
+
+/* Start Landing */
+
+.landing {
+  height: calc(100vh - 69px);
+  background-image: url("../imgs/bg.png");
+  background-size: cover;
+}
+/* End Landing */
+
+/* Start Features */
+.features .icons-holder {
+  height: 200px;
+}
+.features .icons-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.icons-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.icons-holder .icon {
+  color: var(--green);
+  font-size: 4rem;
+}
+.features .f-text {
+  color: var(--yellow);
+}
+/* End Features */
+
+/* Start our work */
+
+.our-work {
+  background-color: var(--section-color);
+}
+.our-work ul .active {
+  background-color: #0d6efd;
+  color: white;
+}
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: black;
+}
+.our-work ul li:hover:not(.active) {
+  color: #0d6efd;
+}
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.our-work .box::before {
+  content: attr(data-work);
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(51, 209, 204, 0.7);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  font-size: 1.2rem;
+  transition: 1s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transform: translateX(calc(-100% - 5px));
+  -webkit-transform: translateX(calc(-100% - 5px));
+  -moz-transform: translateX(calc(-100% - 5px));
+  -ms-transform: translateX(calc(-100% - 5px));
+  -o-transform: translateX(calc(-100% - 5px));
+}
+.our-work .box:hover::before {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+/* End our work */
+/* start stuff */
+.desc {
+  max-width: 500px;
+}
+
+.team {
+  background-color: var(--section-color);
+}
+.team .h-text h3 {
+  color: var(--yellow);
+}
+.team h4 {
+  background-color: var(--green);
+}
+/* end stuff */
+
+/* start start */
+
+.start {
+  background-color: var(--dark);
+}
+
+/* end start */
+/* start sub */
+.sub {
+  background-color: var(--yellow);
+}
+.myinput {
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
+.myinput:focus {
+  outline: none;
+}
+.myinput::placeholder {
+  color: white;
+}
+/* end sub */
+/* Start Footer */
+.footer {
+  background-color: var(--dark);
+}
+.footer .copyright > span {
+  color: var(--green-color);
+}
+.footer .copyright div span {
+  color: var(--yellow-color);
+}
+.footer .contact ul svg {
+  width: 20px;
+  height: 20px;
+}
+.footer .facebook {
+  background-color: #1877f2;
+}
+.footer .twitter {
+  background-color: #1da1f2;
+}
+.footer .linkedin {
+  background-color: #0077b5;
+}
+.footer .youtube {
+  background-color: #ff0000;
+}
+/* End Footer */
